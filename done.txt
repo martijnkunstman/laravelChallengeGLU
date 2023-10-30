@@ -1,0 +1,5 @@
+make repo on GitHub
+make new local database laravelChallengeGLU
+composer create-project laravel/laravel laravelChallengeGLU
+.env -> DB_DATABASE=laravelChallengeGLU
+php artisan migrate
