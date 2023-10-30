@@ -16,7 +16,7 @@ use App\Models\Comment as CommentModel;
 */
 
 Route::get('/', function () {
-    $comments = CommentModel::all();
+    $comments = CommentModel::all()->sortByDesc('created_at');
     return view('home', ['comments' => $comments]);
 });
 Route::post('/', [CommentController::class, 'store']);
