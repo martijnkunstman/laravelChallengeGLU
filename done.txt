@@ -3,3 +3,9 @@ make new local database laravelChallengeGLU
 composer create-project laravel/laravel laravelChallengeGLU
 .env -> DB_DATABASE=laravelChallengeGLU
 php artisan migrate
+php artisan make:migration create_comments_table
+-> add name, email, comment to the migration
+php artisan migrate
+php artisan make:controller Comment
+php artisan make:model Comment 
+-> add fillable to Comment model
