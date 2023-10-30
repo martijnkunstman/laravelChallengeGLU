@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Comment as CommentController;
+use App\Models\Comment as CommentModel;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $comments = CommentModel::all();
+    return view('home', ['comments' => $comments]);
 });
+Route::post('/', [CommentController::class, 'store']);
