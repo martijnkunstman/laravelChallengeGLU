@@ -9,3 +9,4 @@ php artisan migrate
 php artisan make:controller Comment
 php artisan make:model Comment 
 -> add fillable to Comment model
+php artisan serve
